@@ -1,15 +1,20 @@
+---
+title: "Welcome to My Portfolio"
+thumbnail: "images/intro-image.jpg"
+body: "Visual Designer\nBranding & Digital Experiences"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Designer Portfolio</title>
+  <title>{{title}}</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section class="intro" id="intro">
-    <img src="images/intro-image.jpg" alt="Intro Image">
-    <h1>Welcome to My Portfolio</h1>
+    <img src="{{thumbnail}}" alt="Intro Image">
+    <h1>{{title}}</h1>
     <button onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">Enter</button>
   </section>
 
@@ -25,8 +30,8 @@
 
   <section id="home">
     <div class="banner">
-      <h2>Visual Designer</h2>
-      <p>Branding & Digital Experiences</p>
+      <h2>{{body | split: '\n' | first}}</h2>
+      <p>{{body | split: '\n' | last}}</p>
     </div>
   </section>
 
