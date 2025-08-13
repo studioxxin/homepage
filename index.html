@@ -8,13 +8,13 @@ body: "Visual Designer\nBranding & Digital Experiences"
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{title}}</title>
+  <title>Designer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section class="intro" id="intro">
-    <img src="{{thumbnail}}" alt="Intro Image">
-    <h1>{{title}}</h1>
+    <img src="images/intro-image.jpg" alt="Intro Image">
+    <h1>Welcome to My Portfolio</h1>
     <button onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">Enter</button>
   </section>
 
@@ -30,8 +30,8 @@ body: "Visual Designer\nBranding & Digital Experiences"
 
   <section id="home">
     <div class="banner">
-      <h2>{{body | split: '\n' | first}}</h2>
-      <p>{{body | split: '\n' | last}}</p>
+      <h2>Visual Designer</h2>
+      <p>Branding & Digital Experiences</p>
     </div>
   </section>
 
