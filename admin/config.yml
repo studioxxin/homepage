@@ -1,15 +1,15 @@
 backend:
   name: git-gateway
-  branch: main # 또는 master
+  branch: main # GitHub 저장소의 브랜치 이름(main 또는 master)과 일치해야 합니다.
 media_folder: "images"
 public_folder: "/images"
 collections:
-  - name: "projects"
-    label: "프로젝트"
-    folder: "content/projects"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "제목", name: "title", widget: "string"}
-      - {label: "설명", name: "body", widget: "markdown"}
-      - {label: "대표 이미지", name: "thumbnail", widget: "image"}
+  - name: "pages"
+    label: "페이지"
+    files:
+      - file: "index.html"
+        label: "홈페이지"
+        fields:
+          - {label: "제목", name: "title", widget: "string"}
+          - {label: "대표 이미지", name: "thumbnail", widget: "image"}
+          - {label: "내용", name: "body", widget: "markdown"}
